@@ -1,0 +1,404 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Primary Color */
+:root {
+    --primary-color: #006400; /* Dark Green */
+}
+
+/* Secondary Color */
+:root {
+    --secondary-color: #8FBC8F; /* Light Green */
+}
+
+/* Accent Color */
+:root {
+    --accent-color: #DAA520; /* Golden Yellow */
+}
+
+/* Background Color */
+body {
+    background-color: #F5F5DC; /* Cream or Off-White */
+    color: var(--primary-color); /* Set text color */
+}
+
+/* Basic styling for the header */
+/* Basic styling for the header */
+header {
+    position: fixed; /* Fixing header to the top of the viewport */
+    top: 0;
+    left: 0; /* Align to the top left corner */
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 10px 20px; /* Adjust padding to make the header smaller */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Styling for the navigation menu */
+nav ul {
+    list-style: none;
+    display: none; /* Hide navigation menu by default */
+    background-color: var(--secondary-color); /* Set background color */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 10px; /* Add border radius */
+    position: absolute;
+    top: 60px; /* Adjust the distance from the top as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+}
+
+nav:hover ul {
+    display: block; /* Show navigation menu on hover */
+}
+
+/* Styling for the dropdown button */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--accent-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--accent-color);
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide navigation menu on smaller screens */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Display hamburger menu on smaller screens */
+    }
+}
+
+/* Additional CSS for the home section */
+.home-section {
+    padding: 100px 20px; /* Adjust padding as needed */
+    text-align: center;
+    background-image: url('home.jpg'); /* Replace 'home.jpg' with your image file */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Set text color to white */
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h1 {
+    font-size: 48px; /* Increase font size for emphasis */
+    margin-bottom: 30px; /* Increase bottom margin for separation */
+}
+
+.content p {
+    font-size: 20px; /* Increase font size for better readability */
+    line-height: 1.5; /* Add line height for better spacing */
+    margin-bottom: 20px; /* Increase bottom margin for separation */
+}
+
+.contact-btn {
+    background-color: #DAA520; /* Set background color */
+    color: #000000; /* Set text color to white */
+    border:rgba(0, 0, 0, 0.3); /* Remove border */
+    padding: 15px 30px; /* Add padding */
+    font-size: 18px; /* Set font size */
+    border-radius: 50px; /* Add border radius */
+    cursor: pointer; /* Add cursor pointer */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+.contact-btn:hover {
+    background-color: #CD9B1D; /* Darken background color on hover */
+}
+
+
+/* Best practices section */
+.best-practices-section {
+    padding: 80px 20px; /* Adjust padding as needed */
+}
+
+.best-practices-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.best-practices-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.best-practices-section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.best-practices-section ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.best-practices-section ul li {
+    margin-bottom: 10px;
+}
+
+.best-practices-section ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.best-practices-section ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Additional CSS for the Q&A section */
+.q-and-a-section {
+    padding: 80px 20px; /* Adjust padding as needed */
+}
+
+.q-and-a-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.q-and-a-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.q-and-a-section .qa-container {
+    margin-top: 20px;
+}
+
+.q-and-a-section .qa {
+    margin-bottom: 30px;
+}
+
+.q-and-a-section .qa h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.q-and-a-section .qa p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--primary-color);
+}
+
+/* Marketplace Section Styles */
+.marketplace-section {
+    padding: 20px;
+}
+
+.marketplace-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.marketplace-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.marketplace-section .product-listing {
+    margin-bottom: 20px;
+}
+
+.marketplace-section .product-listing h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.marketplace-section .product-listing p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--primary-color);
+}
+
+.marketplace-section .buy-now-button,
+.marketplace-section .forum-button,
+.marketplace-section #search-button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.marketplace-section .buy-now-button:hover,
+.marketplace-section .forum-button:hover,
+.marketplace-section #search-button:hover {
+    background-color: #b8860b; /* Darken the accent color */
+}
+
+/* Additional CSS for the About Us section */
+.about-us-section {
+    background-color: #f8f9fa;
+    padding: 80px 20px; /* Adjust padding as needed */
+    text-align: center;
+    color: var(--primary-color); /* Set text color */
+}
+
+.about-us-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-us-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-us-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap; /* Allow team members to wrap to the next line */
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.team-member {
+    margin-right: 30px; /* Adjust spacing between team members */
+    margin-bottom: 30px; /* Add margin bottom for spacing */
+    flex: 1 1 300px; /* Set flex basis to control the width of team members */
+    max-width: 300px; /* Limit maximum width of team members */
+}
+
+.team-member img {
+    width: 100%; /* Ensure team member images fill their container */
+    height: auto;
+    border-radius: 50%; /* Create oval shape */
+    border: 2px solid #fff; /* Add border for contrast */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-right: 10px; /* Adjust spacing between social media icons */
+}
+
+.social-media a:hover {
+    color: var(--accent-color);
+}
+
+/* WhatsApp and Instagram icons */
+.social-media a i {
+    margin-right: 5px; /* Adjust spacing between icon and text */
+}
+
+/* Add specific styles for WhatsApp and Instagram icons */
+.social-media a.whatsapp i {
+    color: #25D366; /* WhatsApp color */
+}
+
+.social-media a.instagram i {
+    color: #E4405F; /* Instagram color */
+}
+
+/* Additional CSS for the contact us section */
+.contact-us-section {
+    padding: 80px 20px; /* Adjust padding as needed */
+    text-align: center;
+    background-color: #f8f9fa; /* Set background color */
+    color: #333; /* Set text color */
+}
+
+.contact-us-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-us-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-us-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
